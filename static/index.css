@@ -1,0 +1,45 @@
+.nav-list {
+    display: flex;
+}
+
+.contact-input-half {
+    --gap: 24px;
+    width: calc((100% - var(--gap))/ 2);
+}
+
+
+
+@media (max-width: 375px) {
+
+/* 行動裝置預設關閉 */
+.nav-list {
+    display: none;
+}
+
+/* 行動版開啟狀態 */
+.nav-list.active {
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 68px;
+    left: 0px;
+    background-color: var(--color-primary-50);
+    width: 100%;
+    text-align: center;
+    gap: 12px;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+body.menu-open .mask {
+    position: fixed;
+    top: 0;
+    left: o;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-dark-60a);
+}
+}
